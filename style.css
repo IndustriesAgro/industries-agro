@@ -1,0 +1,170 @@
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f1f0e8; /* Fondo tipo tierra clarita */
+    color: #444444; /* Texto gris oscuro */
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #2f5233; /* Verde oscuro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4CAF50; /* Verde hoja en hover */
+}
+
+/* Secciones principales */
+main {
+    margin-top: 20px;
+}
+
+section {
+    background-color: #ffffff; /* Blanco para destacar contenido */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Listas bonitas */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    background: #e3e7d3; /* Verde muy clarito */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Botón de contacto */
+.button {
+    display: inline-block;
+    background-color: #4CAF50; /* Verde hoja */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2f5233; /* Verde oscuro en hover */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #6b4226; /* Marrón tierra */
+    color: white;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aparecer 1s ease forwards;
+    margin-bottom: 20px;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Menú hamburguesa */
+nav {
+    position: relative;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #2f5233; /* Color del fondo del menú */
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 150px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+}
